@@ -57,7 +57,7 @@ export default function HelpPage() {
     setOpenFaq(openFaq === id ? null : id);
   };
   
-  const categories = [...new Set(faqs.map(f => f.category))];
+  const categories = Array.from(new Set(faqs.map(f => f.category)));
   
   return (
     <main className="min-h-screen bg-gray-50 pb-6">
