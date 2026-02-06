@@ -38,8 +38,8 @@ export default function PriceComparePage() {
     
     // 더미 데이터
     const basePrice = selectedMetal === 'GOLD' 
-      ? (selectedPurity.purity / 100) * 268000
-      : (selectedPurity.purity / 100) * 1220;
+      ? selectedPurity.ratio * 268000
+      : selectedPurity.ratio * 1220;
     
     const dummySources: PriceSource[] = [
       {
